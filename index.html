@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>С Днем Рождения, Акерке!</title>
+    <!-- Подключение Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Подключение Google Fonts: Marck Script (для заголовка) и Playfair Display (для основного текста) -->
+    <link href="https://fonts.googleapis.com/css2?family=Marck+Script&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
+    <style>
+        /* Установка глобального шрифта для основного текста */
+        body {
+            font-family: 'Playfair Display', serif;
+            color: #fef3c7; /* Золотистый цвет текста */
+            overflow: hidden; /* Скрываем полосы прокрутки */
+        }
+
+        /* Стиль для видеофона */
+        #video-background {
+            position: fixed;
+            right: 0;
+            bottom: 0;
+            min-width: 100%;
+            min-height: 100%;
+            width: auto;
+            height: auto;
+            z-index: -100;
+            background-color: #000; /* Черный цвет на случай, если видео не загрузится */
+            object-fit: cover; /* Заполняем весь экран */
+            filter: brightness(0.7) blur(1px); /* Делаем видео немного темнее и мягче, чтобы текст был лучше виден */
+        }
+
+        /* Стиль для рукописного шрифта */
+        .script-font {
+            font-family: 'Marck Script', cursive;
+            font-weight: 700;
+        }
+    </style>
+</head>
+<body class="antialiased flex items-center justify-center min-h-screen bg-black">
+
+    <!-- 1. Контейнер для видеофона -->
+    <video autoplay loop muted playsinline id="video-background">
+        <!-- ************************************************************ -->
+        <!--  МЕСТО ДЛЯ ТВОЕГО ВИДЕО (ШАГ 1 в инструкции ниже) -->
+        <!--  ОБЯЗАТЕЛЬНО ЗАМЕНИ ЭТОТ ПЛАГИН НА СВОЙ ФАЙЛ! -->
+        <!-- ************************************************************ -->
+        <source src="videoakerke.mp4" type="video/mp4">
+        Ваш браузер не поддерживает видеофон.
+    </video>
+
+    <!-- 2. Центральная "открытка" с текстом -->
+    <main class="relative z-10 p-8 sm:p-12 md:p-16 w-11/12 max-w-lg lg:max-w-2xl
+                 bg-black/50 backdrop-blur-sm shadow-2xl rounded-xl
+                 border border-amber-300/30 text-center
+                 transition duration-500 hover:scale-[1.02] cursor-default">
+
+        <!-- Заголовок и Имя (Рукописный шрифт) -->
+        <h1 class="script-font text-5xl sm:text-6xl text-amber-300 mb-6 leading-tight">
+            Акерке. С Днем Рождения!
+        </h1>
+
+        <!-- Основной текст поздравления (Элегантный шрифт) -->
+        <div class="space-y-4 text-sm sm:text-base lg:text-lg text-gray-100/90 tracking-wide">
+            <p>
+                Посмотри на этот экран. Я собрал эти моменты, чтобы показать тебе, насколько же ты невероятно светлый человек. Никакая обычная открытка не могла передать твой масштаб!
+            </p>
+            <p>
+                Акерке, ты всегда была и остаешься примером грации, ума и настоящего вкуса к жизни. Ты умеешь делать мир вокруг себя роскошным и уютным одновременно.
+            </p>
+            <p>
+                Желаю тебе сохранить эту невероятную энергию и блеск. Пусть в твоей жизни будет столько же успеха и радости, сколько элегантности в твоем стиле. Пусть самые смелые мечты сбываются, а каждый новый год будет только увеличивать твою внутреннюю силу.
+            </p>
+            <p class="mt-6 text-xl text-amber-200">
+                Наслаждайся этим днем. Он твой по праву!
+            </p>
+        </div>
+
+        <!-- Заключение/Подпись -->
+        <p class="mt-8 pt-4 text-lg sm:text-xl border-t border-amber-300/20 text-right script-font">
+            Свети ярко и будь счастлива!
+        </p>
+        <p class="text-right script-font text-2xl text-amber-300/90">
+            Твой друг, (Твое имя).
+        </p>
+    </main>
+
+    <!-- Дополнительный текст для мобильных устройств, чтобы не было пустых областей -->
+    <div class="fixed inset-0 bg-black/30 z-0"></div>
+
+</body>
+</html>
